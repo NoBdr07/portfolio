@@ -1,0 +1,24 @@
+<div class="titles-container">
+  <h1>Noémie Baudry</h1>
+  <h1>Développeur full stack</h1>
+</div>
+
+<div class="cursus-container">
+  <h2>Cursus</h2>
+  <div class="timeline">
+    <div class="event" *ngFor="let item of events">
+      <div class="date">{{ item.date }}</div>
+      <div class="description">{{ item.description }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="competences">
+    <h2>Compétences</h2>
+    <p>Java</p>
+    <p>Spring</p>
+    <p>Angular</p>
+    <p>MySQL</p>
+    <p>Docker</p>
+    <p>Capacité d'analyse</p>
+</div>

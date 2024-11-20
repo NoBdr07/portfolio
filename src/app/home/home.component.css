@@ -1,0 +1,59 @@
+h1 {
+  font-size: 6vw;
+  color: #043e52;
+}
+
+.titles-container {
+  margin: 100px;
+  height: 100vh;
+}
+
+.cursus-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    border : solid 2px red;
+  }
+  
+  .timeline {
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+    width: max-content;
+  }
+  
+
+/* Élément de la frise */
+.event {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #043e52;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 100px;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event .date {
+  font-weight: bold;
+  font-size: 18px;
+  color: aliceblue;
+}
+
+.event .description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: aliceblue;
+}
+
+.competences {
+    height: 100vh;
+    margin: 200px;
+}
