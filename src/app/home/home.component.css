@@ -1,33 +1,43 @@
 h1 {
-  font-size: 6vw;
+  font-size: 4vw;
   color: #043e52;
 }
 
+h2 {
+  font-size: 3vw;
+}
+
 .titles-container {
-  margin: 100px;
+  margin: 200px;
   height: 100vh;
 }
 
+/* CURSUS CONTAINER */
+
 .cursus-container {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    border : solid 2px red;
-  }
-  
-  .timeline {
-    display: flex;
-    gap: 50px;
-    padding: 20px;
-    width: max-content;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  margin: 200px;
+}
+
+.timeline {
+  display: flex;
+  height: fit-content;
+  gap: 200px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.illustration {
+  height: 100px;
+  width: 150px;
+  object-fit: contain;
+}
+
 
 /* Élément de la frise */
 .event {
-  flex: 0 0 auto;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +45,7 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
+  gap: 20px;
   margin-right: 100px;
   min-width: 200px;
   text-align: center;
@@ -53,7 +64,64 @@ h1 {
   color: aliceblue;
 }
 
+.timeline-point-container {
+  margin: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 700px;
+  background-color: orangered;
+  height: 2px;
+}
+
+.timeline-point {
+  width: 12px;
+  height: 12px;
+  background-color: orangered;
+  border-radius: 50%; /* Crée un rond */
+  z-index: 1; /* Assure que le rond est au-dessus du trait */
+}
+
+.arrow-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+.circle-arrow {
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  margin: 10px;
+  background: linear-gradient(90deg, var(--background-color), var(--accent-color));
+  background-size: 200%;
+  transition: background-position 0.3s ease;
+}
+
+.circle-arrow:hover {
+  cursor: pointer;
+  background-position: 100%;
+}
+
+.mat-icon {
+  font-size: 50px;
+  height: fit-content;
+  width: fit-content;
+  color: aliceblue;
+}
+
+/* COMPETENCES CONTAINER */
+
 .competences {
-    height: 100vh;
-    margin: 200px;
+  height: 100vh;
+  margin: 200px;
 }

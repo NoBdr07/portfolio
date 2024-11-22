@@ -1,24 +1,39 @@
 <div class="titles-container">
-  <h1>Noémie Baudry</h1>
-  <h1>Développeur full stack</h1>
+  <h1>Noémie B.</h1>
+  <h1>Développeuse full stack</h1>
+  <p></p>
 </div>
+
 
 <div class="cursus-container">
   <h2>Cursus</h2>
   <div class="timeline">
     <div class="event" *ngFor="let item of events">
       <div class="date">{{ item.date }}</div>
+      <img class="illustration" [src] = "item.photo" >
+      <div class="timeline-point-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-point"></div>
+      </div>
       <div class="description">{{ item.description }}</div>
+    </div>
+  </div>
+  <div class="arrow-container">
+    <div class="circle-arrow">
+      <mat-icon class="arrow" (click)="onArrowClick('left')">chevron_left</mat-icon>
+    </div>
+    <div class="circle-arrow">
+      <mat-icon class="arrow" (click)="onArrowClick('right')">chevron_right</mat-icon>
     </div>
   </div>
 </div>
 
 <div class="competences">
-    <h2>Compétences</h2>
-    <p>Java</p>
-    <p>Spring</p>
-    <p>Angular</p>
-    <p>MySQL</p>
-    <p>Docker</p>
-    <p>Capacité d'analyse</p>
+  <h2>Compétences</h2>
+  <p>Java</p>
+  <p>Spring</p>
+  <p>Angular</p>
+  <p>MySQL</p>
+  <p>Docker</p>
+  <p>Capacité d'analyse</p>
 </div>

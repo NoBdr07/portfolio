@@ -3,3 +3,22 @@ body {
     background-color: aliceblue;
     color: #043e52;
 }
+
+:root {
+    --primary-color: aliceblue;
+    --dark-color: #043E52;
+    --accent-color: #E16A3D;
+    --warn-color: rgba(194, 13, 13, 0.5);
+    --background-color: #043E52;
+    --text-color: aliceblue;
+  
+    --mat-primary-color: var(--background-color);
+    --mat-accent-color: var(--accent-color);
+    --mat-warn-color: var(--warn-color);
+  
+    --mdc-filled-text-field-container-color: white;
+  
+    --mat-primary-contrast: var(--text-color);
+    --mat-accent-contrast: var(--text-color);
+    --mat-warn-contrast: var(--text-color);
+  }
