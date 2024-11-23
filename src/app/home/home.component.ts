@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   events = [
     {
       date: '2013',
@@ -62,4 +62,31 @@ export class HomeComponent {
       });
     }
   }
+
+  ngAfterViewInit(): void {
+    const competences: NodeListOf<HTMLElement> = this.el.nativeElement.querySelectorAll('.jauge-bar');
+    
+    // IntersectionObserver configuration
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            const skillLevel = target.getAttribute('data-skill-level');
+            if (skillLevel) {
+              setTimeout(() => {
+                target.style.width = `${skillLevel}%`;
+              }, index * 500); // Délais entre chaque compétence
+            }
+            observer.unobserve(target); // Arrête d'observer après l'animation
+          }
+        });
+      },
+      { threshold: 0.5 } // 50% visible pour déclencher l'animation
+    );
+
+    // Observe chaque jauge
+    competences.forEach((bar) => observer.observe(bar));
+  }
+  
 }

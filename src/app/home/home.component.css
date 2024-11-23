@@ -1,16 +1,49 @@
 h1 {
   font-size: 4vw;
-  color: #043e52;
+  color: var(--dark-color);
+  font-weight: initial;
 }
 
 h2 {
   font-size: 3vw;
+  font-weight: initial;
 }
 
 .titles-container {
-  margin: 200px;
+  margin-top: 10vw;
   height: 100vh;
+  text-align: center;
+  font-weight: lighter;  
 }
+
+.titles-container h1, .titles-container h2 {
+  margin: 0;
+}
+
+.titles-container h1 {
+  animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 1s;
+}
+
+.titles-container h2 {
+  animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 2s;
+}
+
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
 
 /* CURSUS CONTAINER */
 
@@ -34,14 +67,13 @@ h2 {
   object-fit: contain;
 }
 
-
 /* Élément de la frise */
 .event {
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #043e52;
+  background-color: var(--dark-color);
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
@@ -55,13 +87,13 @@ h2 {
 .event .date {
   font-weight: bold;
   font-size: 18px;
-  color: aliceblue;
+  color: var(--primary-color);
 }
 
 .event .description {
   margin-top: 10px;
   font-size: 14px;
-  color: aliceblue;
+  color: var(--primary-color);
 }
 
 .timeline-point-container {
@@ -76,14 +108,14 @@ h2 {
 .timeline-line {
   position: absolute;
   width: 700px;
-  background-color: orangered;
+  background-color: var(--accent-color);
   height: 2px;
 }
 
 .timeline-point {
   width: 12px;
   height: 12px;
-  background-color: orangered;
+  background-color: var(--accent-color);
   border-radius: 50%; /* Crée un rond */
   z-index: 1; /* Assure que le rond est au-dessus du trait */
 }
@@ -102,7 +134,11 @@ h2 {
   width: 50px;
   padding: 10px;
   margin: 10px;
-  background: linear-gradient(90deg, var(--background-color), var(--accent-color));
+  background: linear-gradient(
+    90deg,
+    var(--background-color),
+    var(--accent-color)
+  );
   background-size: 200%;
   transition: background-position 0.3s ease;
 }
@@ -116,7 +152,7 @@ h2 {
   font-size: 50px;
   height: fit-content;
   width: fit-content;
-  color: aliceblue;
+  color: var(--primary-color);
 }
 
 /* COMPETENCES CONTAINER */
@@ -124,4 +160,104 @@ h2 {
 .competences {
   height: 100vh;
   margin: 200px;
+  max-width: 600px;
+  margin: 0 auto;
 }
+
+.competence {
+  margin: 15px 0;
+}
+
+.jauge {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid var(--dark-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.jauge-bar {
+  height: 100%;
+  width: 0; /* Initialement vide */
+  background-color: var(--accent-color);
+  transition: width 3s ease-in-out;
+}
+
+/* PROJETS CONTAINER */
+
+.projets {
+  position: relative;
+  height: 1000px;
+}
+
+.projet {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 400px;
+}
+
+.captures {
+  position: relative;
+  margin: 0 auto; /* Centre le tas horizontalement */
+}
+
+.capture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Positionnement initial des images en "tas" */
+.capture:nth-child(1) {
+  z-index:5;
+}
+
+.capture:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.capture:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.capture:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(5deg);
+}
+
+.capture:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+/* Effet de dispersion en cercle au survol */
+.captures:hover .capture:nth-child(1) {
+ /* transform: translate(-50%, -50%) translate(0, -350px);  */
+}
+
+.captures:hover .capture:nth-child(2) {
+  transform: translate(-50%, -50%) translate(400px, -276px); /* Diagonale haut-droite */
+}
+
+.captures:hover .capture:nth-child(3) {
+  transform: translate(-50%, -50%) translate(400px, 276px); /* Droite */
+}
+
+.captures:hover .capture:nth-child(4) {
+  transform: translate(-50%, -50%) translate(-400px, -276px); /* Diagonale haut-gauche */
+}
+
+.captures:hover .capture:nth-child(5) {
+  transform: translate(-50%, -50%) translate(-400px, 276px); /* Gauche */
+}
+
+
+

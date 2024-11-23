@@ -1,16 +1,14 @@
 <div class="titles-container">
   <h1>Noémie B.</h1>
-  <h1>Développeuse full stack</h1>
-  <p></p>
+  <h2>Développeuse full stack</h2>
 </div>
-
 
 <div class="cursus-container">
   <h2>Cursus</h2>
   <div class="timeline">
     <div class="event" *ngFor="let item of events">
       <div class="date">{{ item.date }}</div>
-      <img class="illustration" [src] = "item.photo" >
+      <img class="illustration" [src]="item.photo" />
       <div class="timeline-point-container">
         <div class="timeline-line"></div>
         <div class="timeline-point"></div>
@@ -20,20 +18,62 @@
   </div>
   <div class="arrow-container">
     <div class="circle-arrow">
-      <mat-icon class="arrow" (click)="onArrowClick('left')">chevron_left</mat-icon>
+      <mat-icon class="arrow" (click)="onArrowClick('left')"
+        >chevron_left</mat-icon
+      >
     </div>
     <div class="circle-arrow">
-      <mat-icon class="arrow" (click)="onArrowClick('right')">chevron_right</mat-icon>
+      <mat-icon class="arrow" (click)="onArrowClick('right')"
+        >chevron_right</mat-icon
+      >
     </div>
   </div>
 </div>
 
 <div class="competences">
   <h2>Compétences</h2>
-  <p>Java</p>
-  <p>Spring</p>
-  <p>Angular</p>
-  <p>MySQL</p>
-  <p>Docker</p>
-  <p>Capacité d'analyse</p>
+  <div class="competence">
+    <p>Java</p>
+    <div class="jauge">
+      <div class="jauge-bar" data-skill-level="80"></div>
+    </div>
+  </div>
+  <div class="competence">
+    <p>Spring</p>
+    <div class="jauge">
+      <div class="jauge-bar" data-skill-level="90"></div>
+    </div>
+  </div>
+  <div class="competence">
+    <p>Angular</p>
+    <div class="jauge">
+      <div class="jauge-bar" data-skill-level="90"></div>
+    </div>
+  </div>
+  <div class="competence">
+    <p>MySQL</p>
+    <div class="jauge">
+      <div class="jauge-bar" data-skill-level="70"></div>
+    </div>
+  </div>
+  <div class="competence">
+    <p>Docker</p>
+    <div class="jauge">
+      <div class="jauge-bar" data-skill-level="50"></div>
+    </div>
+  </div>
+</div>
+
+<div class="projets">
+  <h2>Projets</h2>
+  <div class="projet">
+    <h3>Randogs</h3>
+    <div class="captures">
+      <img class="capture" src="../../assets/randogs1.png">
+      <img class="capture" src="../../assets/randogs2.png">
+      <img class="capture" src="../../assets/randogs3.png">
+      <img class="capture" src="../../assets/randogs4.png">
+      <img class="capture" src="../../assets/randogs5.png">
+    </div>
+  </div>
 </div>

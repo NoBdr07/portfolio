@@ -1,16 +1,16 @@
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: aliceblue;
-    color: #043e52;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
 }
 
 :root {
-    --primary-color: aliceblue;
-    --dark-color: #043E52;
+    --primary-color: #dfefff;
+    --dark-color: #00154d;
     --accent-color: #E16A3D;
     --warn-color: rgba(194, 13, 13, 0.5);
-    --background-color: #043E52;
-    --text-color: aliceblue;
+    --background-color: #00154d;
+    --text-color: #dfefff;
   
     --mat-primary-color: var(--background-color);
     --mat-accent-color: var(--accent-color);
