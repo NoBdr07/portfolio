@@ -9,6 +9,11 @@ h2 {
   font-weight: initial;
 }
 
+h3 {
+  font-size: 2vw;
+  margin-bottom: 0;
+}
+
 .titles-container {
   margin-top: 10vw;
   height: 100vh;
@@ -189,19 +194,21 @@ h2 {
 
 .projets {
   position: relative;
-  height: 1000px;
+  height: fit-content;
+  margin: 0 10%;
 }
 
 .projet {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 400px;
+  gap: 20px;
 }
 
 .captures {
   position: relative;
   margin: 0 auto; /* Centre le tas horizontalement */
+  height: 900px;
 }
 
 .capture {
@@ -239,9 +246,6 @@ h2 {
 }
 
 /* Effet de dispersion en cercle au survol */
-.captures:hover .capture:nth-child(1) {
- /* transform: translate(-50%, -50%) translate(0, -350px);  */
-}
 
 .captures:hover .capture:nth-child(2) {
   transform: translate(-50%, -50%) translate(400px, -276px); /* Diagonale haut-droite */
@@ -257,6 +261,12 @@ h2 {
 
 .captures:hover .capture:nth-child(5) {
   transform: translate(-50%, -50%) translate(-400px, 276px); /* Gauche */
+}
+
+.emplacement {
+  height: 300px;
+  width: 300px;
+  box-shadow: none;
 }
 
 
