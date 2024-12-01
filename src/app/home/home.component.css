@@ -49,6 +49,12 @@ h3 {
   }
 }
 
+/* INTRO CONTAINER */
+
+.intro {
+  font-size: 1.5vw;
+}
+
 
 /* CURSUS CONTAINER */
 
@@ -261,12 +267,6 @@ h3 {
 
 .captures:hover .capture:nth-child(5) {
   transform: translate(-50%, -50%) translate(-400px, 276px); /* Gauche */
-}
-
-.emplacement {
-  height: 300px;
-  width: 300px;
-  box-shadow: none;
 }
 
 
