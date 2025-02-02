@@ -1,28 +1,74 @@
 h1 {
-  font-size: 4vw;
+  font-size: 4rem;
   color: var(--dark-color);
   font-weight: initial;
 }
 
 h2 {
-  font-size: 3vw;
-  font-weight: initial;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 2vw;
+  font-size: 2rem;
   margin-bottom: 0;
 }
 
-.titles-container {
-  margin-top: 10vw;
-  height: 100vh;
-  text-align: center;
-  font-weight: lighter;  
+.global-container {
+  padding-bottom: 200vh;
 }
 
-.titles-container h1, .titles-container h2 {
+/* LES H2 POUR EFFET ONGLET */
+
+.onglet {
+  font-size: 2rem;
+  font-weight: initial;
+  font-variant: all-small-caps;
+  top: -99px;
+  border-top: solid;
+  position: relative;
+  text-align: center;
+  background: var(--primary-color);
+  height: 49px;
+  border-right: solid;
+  border-left: solid;
+  padding: 10px;
+  width: 200px;
+}
+
+.cursus-container h2 {
+  left: -250px;
+}
+
+.competences-container h2 {
+  left: 294px;
+  position: absolute;
+}
+
+.projets-container h2 {
+  min-width: 200px;
+  left: 237px;
+}
+
+.contact-container h2 {
+  left: 480px;
+}
+
+/* TITLE CONTAINER */
+
+.titles-container {
+  margin-top: 10rem;
+  height: 200px;
+  width: 100%;
+  /*position: fixed;*/
+  z-index: -1;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.titles-container h1,
+.titles-container h2 {
   margin: 0;
+  z-index: 1;
 }
 
 .titles-container h1 {
@@ -49,19 +95,29 @@ h3 {
   }
 }
 
-/* INTRO CONTAINER */
-
 .intro {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
+  margin-top: 100px;
+  padding: 0 200px;
+  text-align: center;
+  font-weight: bold;
 }
-
 
 /* CURSUS CONTAINER */
 
 .cursus-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  margin: 200px;
+  margin: 100vh 0 0 0;
+  background-color: var(--primary-color);
+  box-sizing: border-box;
+  border-top: solid;
+  position: sticky;
+  top: 90px;
+  z-index: 2;
+  height: 1000px;
+  padding: 0 300px 100px 300px;
 }
 
 .timeline {
@@ -78,7 +134,6 @@ h3 {
   object-fit: contain;
 }
 
-/* Élément de la frise */
 .event {
   height: fit-content;
   display: flex;
@@ -107,6 +162,12 @@ h3 {
   color: var(--primary-color);
 }
 
+.skill {
+  background: var(--primary-color);
+  border-radius: 8px;
+  padding: 5px;
+}
+
 .timeline-point-container {
   margin: 20px;
   position: relative;
@@ -127,8 +188,8 @@ h3 {
   width: 12px;
   height: 12px;
   background-color: var(--accent-color);
-  border-radius: 50%; /* Crée un rond */
-  z-index: 1; /* Assure que le rond est au-dessus du trait */
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .arrow-container {
@@ -168,6 +229,18 @@ h3 {
 
 /* COMPETENCES CONTAINER */
 
+.competences-container {
+  background-color: var(--primary-color);
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 90px;
+  z-index: 3;
+  border-top: solid;
+  height: 1000px;
+  padding: 0 300px 100px 300px;
+}
+
 .competences {
   height: 100vh;
   margin: 200px;
@@ -191,30 +264,39 @@ h3 {
 
 .jauge-bar {
   height: 100%;
-  width: 0; /* Initialement vide */
+  width: 0;
   background-color: var(--accent-color);
   transition: width 3s ease-in-out;
 }
 
 /* PROJETS CONTAINER */
 
+.projets-container {
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 1000px;
+  padding: 0 300px 100px 300px;
+  box-sizing: border-box;
+  z-index: 4;
+  position: sticky;
+  top: 90px;
+  border-top: solid;
+}
+
 .projets {
-  position: relative;
-  height: fit-content;
-  margin: 0 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 
 .projet {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  height: 500px;
 }
 
 .captures {
   position: relative;
-  margin: 0 auto; /* Centre le tas horizontalement */
-  height: 900px;
+  margin: 0 auto; 
+  height: 300px;
 }
 
 .capture {
@@ -222,7 +304,7 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 300px;
+  height: 20%;
   object-fit: cover;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
@@ -232,7 +314,7 @@ h3 {
 
 /* Positionnement initial des images en "tas" */
 .capture:nth-child(1) {
-  z-index:5;
+  z-index: 5;
 }
 
 .capture:nth-child(2) {
@@ -254,20 +336,38 @@ h3 {
 /* Effet de dispersion en cercle au survol */
 
 .captures:hover .capture:nth-child(2) {
-  transform: translate(-50%, -50%) translate(400px, -276px); /* Diagonale haut-droite */
+  transform: translate(-50%, -50%) translate(300px, -176px); /* Diagonale haut-droite */
 }
 
 .captures:hover .capture:nth-child(3) {
-  transform: translate(-50%, -50%) translate(400px, 276px); /* Droite */
+  transform: translate(-50%, -50%) translate(300px, 176px); /* Droite */
 }
 
 .captures:hover .capture:nth-child(4) {
-  transform: translate(-50%, -50%) translate(-400px, -276px); /* Diagonale haut-gauche */
+  transform: translate(-50%, -50%) translate(-300px, -176px); /* Diagonale haut-gauche */
 }
 
 .captures:hover .capture:nth-child(5) {
-  transform: translate(-50%, -50%) translate(-400px, 276px); /* Gauche */
+  transform: translate(-50%, -50%) translate(-300px, 176px); /* Gauche */
+}
+
+
+/* CONTACT CONTAINER */
+
+.contact-container {
+  z-index: 6;
+  position: sticky;
+  top: 90px;
+  background-color: var(--primary-color);
+  border-top: solid;
+  height: 1000px;
+  padding: 0 300px 100px 300px;
 }
 
 
 
+/* GHOST CONTAINER */
+
+.ghost-container {
+  height: 1000px;
+}

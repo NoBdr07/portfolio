@@ -13,33 +13,39 @@ export class HomeComponent implements AfterViewInit {
   events = [
     {
       date: '2013',
-      description: 'Prépa scientifique',
+      description: 'Prépa scientifique (maths Sup, maths Spé)',
       photo: '../../assets/maths.png',
+      skills: ["Esprit scientifique", "Mathématiques", "Python"]
     },
     {
       date: '2015',
       description: 'École Spéciale Militaire de Saint-Cyr',
       photo: '../../assets/esm.png',
+      skills: ["Rigueur", "Leadership", "Dépassement de soi"]
     },
     {
       date: '2018',
       description: "Diplôme d'ingénieur mathématiques informatique",
       photo: '../../assets/diplome.png',
+      skills: ["Esprit d'analyse", "C#", "Unreal Engine"]
     },
     {
       date: '2019',
       description: "Officier dans l'armée de terre",
       photo: '../../assets/officer.png',
+      skills: ["Direction d'équipes et de projets", "Capacité d'organisation", "Capacité d'adaptation"]
     },
     {
       date: 'Avril 2024',
       description: 'Reconversion expert en développement logiciel',
       photo: '../../assets/study.png',
+      skills: ["Spécialisation Java et Angular", "Veille techonologique", "Architecture logiciel"]
     },
     {
       date: 'Septembre 2024',
-      description: "Développement d'une application full stack",
+      description: "Développement d'applications full stack",
       photo: '../../assets/computer.png',
+      skills: ["Projets réels", "Déploiement et monitoring", "Analyse des besoins client"]
     },
   ];
 

@@ -1,123 +1,137 @@
-<div class="titles-container">
-  <h1>Noémie B.</h1>
-  <h2>Développeuse full stack</h2>
-</div>
+<div class="global-container">
+  <div class="titles-container">
+    <h1>Noémie B.</h1>
+    <h2>Développeuse full stack</h2>
 
-<div class="intro">
-  <p>
-    J’ai découvert le code comme un jeu pendant mes études scientifiques, sans
-    imaginer qu’il deviendrait un jour mon métier. Dix ans plus tard, j’ai
-    décidé de transformer cette passion en carrière. Curieuse et motivée par les
-    défis, j’aime créer des solutions concrètes qui donnent vie à des idées. Ce
-    site rassemble mon parcours et les projets qui reflètent cette énergie.
-  </p>
-</div>
+    <div class="intro">
+      <p>
+        J’ai découvert le code comme un jeu pendant mes études scientifiques,
+        sans imaginer qu’il deviendrait un jour mon métier. Dix ans plus tard,
+        j’ai décidé de transformer cette passion en carrière. Curieuse et
+        motivée par les défis, j’aime créer des solutions concrètes qui donnent
+        vie à des idées. Ce site rassemble mon parcours et les projets qui
+        reflètent cette énergie.
+      </p>
+    </div>
+  </div>
 
-<div class="cursus-container">
-  <h2>Cursus</h2>
-  <div class="timeline">
-    <div class="event" *ngFor="let item of events">
-      <div class="date">{{ item.date }}</div>
-      <img class="illustration" [src]="item.photo" />
-      <div class="timeline-point-container">
-        <div class="timeline-line"></div>
-        <div class="timeline-point"></div>
+  <div class="cursus-container">
+    <h2 class="onglet">Cursus</h2>
+    <div class="timeline">
+      <div class="event" *ngFor="let item of events">
+        <div class="date">{{ item.date }}</div>
+        <img class="illustration" [src]="item.photo" />
+        <div class="timeline-point-container">
+          <div class="timeline-line"></div>
+          <div class="timeline-point"></div>
+        </div>
+        <div class="description">{{ item.description }}</div>
+        <div class="skill" *ngFor="let skill of item.skills">+ {{ skill }}</div>
       </div>
-      <div class="description">{{ item.description }}</div>
+    </div>
+    <div class="arrow-container">
+      <div class="circle-arrow">
+        <mat-icon class="arrow" (click)="onArrowClick('left')"
+          >chevron_left</mat-icon
+        >
+      </div>
+      <div class="circle-arrow">
+        <mat-icon class="arrow" (click)="onArrowClick('right')"
+          >chevron_right</mat-icon
+        >
+      </div>
     </div>
   </div>
-  <div class="arrow-container">
-    <div class="circle-arrow">
-      <mat-icon class="arrow" (click)="onArrowClick('left')"
-        >chevron_left</mat-icon
-      >
-    </div>
-    <div class="circle-arrow">
-      <mat-icon class="arrow" (click)="onArrowClick('right')"
-        >chevron_right</mat-icon
-      >
-    </div>
-  </div>
-</div>
 
-<div class="competences">
-  <h2>Compétences</h2>
-  <div class="competence">
-    <p>Java</p>
-    <div class="jauge">
-      <div class="jauge-bar" data-skill-level="80"></div>
+  <div class="competences-container">
+    <div class="competences">
+      <h2 class="onglet">Compétences</h2>
+      <div class="competence">
+        <p>Java</p>
+        <div class="jauge">
+          <div class="jauge-bar" data-skill-level="80"></div>
+        </div>
+      </div>
+      <div class="competence">
+        <p>Spring</p>
+        <div class="jauge">
+          <div class="jauge-bar" data-skill-level="90"></div>
+        </div>
+      </div>
+      <div class="competence">
+        <p>Angular</p>
+        <div class="jauge">
+          <div class="jauge-bar" data-skill-level="90"></div>
+        </div>
+      </div>
+      <div class="competence">
+        <p>MySQL</p>
+        <div class="jauge">
+          <div class="jauge-bar" data-skill-level="70"></div>
+        </div>
+      </div>
+      <div class="competence">
+        <p>MongoDB</p>
+        <div class="jauge">
+          <div class="jauge-bar" data-skill-level="60"></div>
+        </div>
+      </div>
+      <div class="competence">
+        <p>Docker</p>
+        <div class="jauge">
+          <div class="jauge-bar" data-skill-level="50"></div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="competence">
-    <p>Spring</p>
-    <div class="jauge">
-      <div class="jauge-bar" data-skill-level="90"></div>
-    </div>
-  </div>
-  <div class="competence">
-    <p>Angular</p>
-    <div class="jauge">
-      <div class="jauge-bar" data-skill-level="90"></div>
-    </div>
-  </div>
-  <div class="competence">
-    <p>MySQL</p>
-    <div class="jauge">
-      <div class="jauge-bar" data-skill-level="70"></div>
-    </div>
-  </div>
-  <div class="competence">
-    <p>MongoDB</p>
-    <div class="jauge">
-      <div class="jauge-bar" data-skill-level="60"></div>
-    </div>
-  </div>
-  <div class="competence">
-    <p>Docker</p>
-    <div class="jauge">
-      <div class="jauge-bar" data-skill-level="50"></div>
-    </div>
-  </div>
-</div>
 
-<div class="projets">
-  <h2>Projets</h2>
-  <div class="projet">
-    <h3>Randogs</h3>
-    <p>
-      Cette application permet aux clients de réserver en ligne, payer leur
-      réservation, offrir des bons cadeaux et consulter les informations sur les
-      différentes activité proposées par l'entreprise. Elle comporte aussi une
-      interface administrateur complète qui permet la gestion du planning, des
-      créneaux disponibles, des bons cadeaux, des activités et de la FAQ par les
-      gérants de l'entreprise. <br />
-      Elle est composée d'un front Angular, une API Java Spring, une base de
-      données MySQL. Elle est déployée sur Heroku et permet l'analyse de
-      l'activité du site avec Google Analytics. La sécurité, le SEO et
-      l'experience utilisateur ont été des points d'attention particuliers dans
-      la réalisation de ce projet.
-    </p>
-    <div class="captures">
-      <img class="capture" src="../../assets/randogs1.png" />
-      <img class="capture" src="../../assets/randogs2.png" />
-      <img class="capture" src="../../assets/randogs3.png" />
-      <img class="capture" src="../../assets/randogs4.png" />
-      <img class="capture" src="../../assets/randogs5.png" />
+  <div class="projets-container">
+    <div class="projets">
+      <h2 class="onglet">Projets</h2>
+      <div class="projet">
+        <h3>Randogs</h3>
+        <p>
+          Cette application permet aux clients de réserver en ligne, payer leur
+          réservation, offrir des bons cadeaux et consulter les informations sur
+          les différentes activité proposées par l'entreprise. Elle comporte
+          aussi une interface administrateur complète qui permet la gestion du
+          planning, des créneaux disponibles, des bons cadeaux, des activités et
+          de la FAQ par les gérants de l'entreprise. <br />
+          Elle est composée d'un front Angular, une API Java Spring, une base de
+          données MySQL. Elle est déployée sur Heroku et permet l'analyse de
+          l'activité du site avec Google Analytics. La sécurité, le SEO et
+          l'experience utilisateur ont été des points d'attention particuliers
+          dans la réalisation de ce projet.
+        </p>
+        <div class="captures">
+          <img class="capture" src="../../assets/randogs1.png" />
+          <img class="capture" src="../../assets/randogs2.png" />
+          <img class="capture" src="../../assets/randogs3.png" />
+          <img class="capture" src="../../assets/randogs4.png" />
+          <img class="capture" src="../../assets/randogs5.png" />
+        </div>
+      </div>
+      <div class="projet">
+        <h3>Application de bloging</h3>
+        <p>
+          Application full stack d'entrainement pour apprendre à gérer
+          efficacement la connexion, l'affichage de données qui évoluent en
+          temps réel et la gestion sécuritaire de l'ajout de texte libre.
+        </p>
+        <div class="captures">
+          <img class="capture" src="../../assets/mdd1.png" />
+          <img class="capture" src="../../assets/mdd2.png" />
+          <img class="capture" src="../../assets/mdd3.png" />
+          <img class="capture" src="../../assets/mdd4.png" />
+          <img class="capture" src="../../assets/mdd5.png" />
+        </div>
+      </div>
     </div>
   </div>
-  <div class="projet">
-    <h3>Application de bloging</h3>
-    <p>
-      Application full stack d'entrainement pour apprendre à gérer efficacement
-      la connexion, l'affichage de données qui évoluent en temps réel et la
-      gestion sécuritaire de l'ajout de texte libre.
-    </p>
-    <div class="captures">
-      <img class="capture" src="../../assets/mdd1.png" />
-      <img class="capture" src="../../assets/mdd2.png" />
-      <img class="capture" src="../../assets/mdd3.png" />
-      <img class="capture" src="../../assets/mdd4.png" />
-      <img class="capture" src="../../assets/mdd5.png" />
-    </div>
+
+  <div class="contact-container">
+    <h2 class="onglet">Contact</h2>
   </div>
+
+  <div class="ghost-container"></div>
 </div>
