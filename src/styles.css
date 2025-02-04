@@ -5,12 +5,12 @@ body {
 }
 
 :root {
-    --primary-color: #dfefff;
-    --dark-color: #00154d;
-    --accent-color: #E16A3D;
-    --warn-color: rgba(194, 13, 13, 0.5);
-    --background-color: #00154d;
-    --text-color: #dfefff;
+    --primary-color: #eeece7;
+    --dark-color: #006b8c;
+    --accent-color: #E13D3D;
+    --warn-color: #E13D3D;
+    --background-color: #006b8c;
+    --text-color: #eeece7;
   
     --mat-primary-color: var(--background-color);
     --mat-accent-color: var(--accent-color);

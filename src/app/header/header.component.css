@@ -3,6 +3,10 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 20px;
+  position: fixed;
+  top:0;
+  width: 90%;
+  box-sizing: border-box;
 }
 
 img {
@@ -11,4 +15,7 @@ img {
 
 .portfolio {
   height: 5vw;
+  font-family: "Galada";
+  font-size: 2vw;
+  margin: 0;
 }

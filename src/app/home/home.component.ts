@@ -93,6 +93,26 @@ export class HomeComponent implements AfterViewInit {
 
     // Observe chaque jauge
     competences.forEach((bar) => observer.observe(bar));
+
+    document.querySelectorAll('.capture1').forEach((image) => {
+      image.addEventListener('click', () => {
+        const container = document.querySelector('.captures1');
+        if (container) {
+        container.classList.toggle('fullscreen');
+        }
+      })
+    })
+
+    document.querySelectorAll('.capture2').forEach((image) => {
+      image.addEventListener('click', () => {
+        const container = document.querySelector('.captures2');
+        if (container) {
+        container.classList.toggle('fullscreen');
+        }
+      })
+    })
   }
+
+  
   
 }
