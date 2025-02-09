@@ -1,9 +1,3 @@
-h1 {
-  font-size: 15vw;
-  color: var(--dark-color);
-  font-weight: initial;
-  font-family: "Galada";
-}
 
 h2 {
   font-size: 3rem;
@@ -14,6 +8,10 @@ h3 {
   margin-bottom: 0;
 }
 
+.global-container {
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
 
 /* LES H2 POUR EFFET ONGLET */
@@ -67,11 +65,68 @@ h3 {
   font-weight: lighter;
 }
 
+.titles {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 16rem;
+  color: var(--dark-color);
+  font-weight: initial;
+  font-family: "Dr Sugiyama";
+  line-height: 200px;  
+}
+
+.prenom {
+  position: relative;
+  top: 2rem;
+}
+
+.nom {
+  position: relative;
+  left: -7rem;
+}
+
+.illus {
+  height: 600px;
+}
+
+.illus-wrapper {
+  display: inline-block;
+}
+
+.illus-wrapper::after {
+  content: "";
+  display: block;
+  height: 10px;
+  background-color: var(--dark-color);
+  width: calc(100vw - ((100vw - 100%) / 2));
+  transform: translateX(- calc(((100vw - 100%) / 2)));
+}
+
 .titles-container h1,
 .titles-container h2 {
   margin: 0;
   z-index: 1;
 }
+
+.intro {
+  font-size: 2vw;
+  text-align: start;
+  font-weight: bolder;
+  line-height: 150px;
+  margin: 300px 100px;
+  top: 0.5vw;
+}
+
 
 .titles-container h1 {
   animation-delay: 1s;
@@ -80,13 +135,12 @@ h3 {
 }
 
 .titles-container h2 {
-  animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation-delay: 2s;
+  /*animation: focus-in-contract-bck 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 2s;*/
   font-weight: bolder;
   position: relative;
-  top: -8.5vw;
-  right: -24vw;
-  font-size: 2.5vw;
+  left: -9rem;
+  font-size: 3rem;
 }
 
 @keyframes focus-in-contract-bck {
@@ -126,15 +180,6 @@ h3 {
   100% {
     opacity: 1;
   }
-}
-
-
-.intro {
-  font-size: 2vw;
-  text-align: start;
-  font-weight: bolder;
-  line-height: 150px;
-  margin: 100px;
 }
 
 /* CURSUS CONTAINER */
