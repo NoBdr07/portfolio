@@ -2,8 +2,8 @@
   <div class="titles-container">
     <div class="titles">
       <div class="illus-wrapper">
-      <img class="illus" src="assets/illusperso2.webp" />
-    </div>
+        <img class="illus" src="assets/illusperso2.webp" />
+      </div>
       <div class="title">
         <h1 class="prenom">Noémie</h1>
         <h1 class="nom">Baudry</h1>
@@ -171,11 +171,72 @@
           dans la réalisation de ce projet.
         </p>
         <div class="captures captures1">
-          <img class="capture capture1" src="../../assets/randogs1.png" />
-          <img class="capture capture1" src="../../assets/randogs2.png" />
-          <img class="capture capture1" src="../../assets/randogs3.png" />
-          <img class="capture capture1" src="../../assets/randogs4.png" />
-          <img class="capture capture1" src="../../assets/randogs5.png" />
+          <img
+            (click)="openCaroussel(1)"
+            class="capture capture1"
+            src="../../assets/randogs1.png"
+          />
+          <img
+            (click)="openCaroussel(1)"
+            class="capture capture1"
+            src="../../assets/randogs2.png"
+          />
+          <img
+            (click)="openCaroussel(1)"
+            class="capture capture1"
+            src="../../assets/randogs3.png"
+          />
+          <img
+            (click)="openCaroussel(1)"
+            class="capture capture1"
+            src="../../assets/randogs4.png"
+          />
+          <img
+            (click)="openCaroussel(1)"
+            class="capture capture1"
+            src="../../assets/randogs5.png"
+          />
+        </div>
+        <div *ngIf="openCaroussel1" class="caroussel-container">
+          <div class="caroussel-capture-container caroussel1">
+            <img
+              (click)="closeCaroussel(1)"
+              class="caroussel-capture caroussel-capture1"
+              src="../../assets/randogs1.png"
+            />
+            <img
+              (click)="closeCaroussel(1)"
+              class="caroussel-capture caroussel-capture1"
+              src="../../assets/randogs2.png"
+            />
+            <img
+              (click)="closeCaroussel(1)"
+              class="caroussel-capture caroussel-capture1"
+              src="../../assets/randogs3.png"
+            />
+            <img
+              (click)="closeCaroussel(1)"
+              class="caroussel-capture caroussel-capture1"
+              src="../../assets/randogs4.png"
+            />
+            <img
+              (click)="closeCaroussel(1)"
+              class="caroussel-capture caroussel-capture1"
+              src="../../assets/randogs5.png"
+            />
+          </div>
+          <div class="caroussel-arrows-container">
+            <div class="caroussel-circle-arrow">
+              <mat-icon class="caroussel-arrow" (click)="onCarousselArrowClick1('left')"
+                >chevron_left</mat-icon
+              >
+            </div>
+            <div class="caroussel-circle-arrow">
+              <mat-icon class="caroussel-arrow" (click)="onCarousselArrowClick1('right')"
+                >chevron_right</mat-icon
+              >
+            </div>
+          </div>
         </div>
       </div>
       <div class="projet">
@@ -192,11 +253,52 @@
           du département tech de l'association.
         </p>
         <div class="captures captures2">
-          <img class="capture capture2" src="../../assets/owod1.png" />
-          <img class="capture capture2" src="../../assets/owod2.png" />
-          <img class="capture capture2" src="../../assets/owod3.png" />
-          <img class="capture capture2" src="../../assets/owod4.png" />
-          <img class="capture capture2" src="../../assets/owod5.png" />
+          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod1.png" />
+          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod2.png" />
+          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod3.png" />
+          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod4.png" />
+          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod5.png" />
+        </div>
+      </div>
+      <div *ngIf="openCaroussel2" class="caroussel-container">
+        <div class="caroussel-capture-container caroussel2">
+          <img
+            (click)="closeCaroussel(2)"
+            class="caroussel-capture caroussel-capture2"
+            src="../../assets/owod1.png"
+          />
+          <img
+            (click)="closeCaroussel(2)"
+            class="caroussel-capture caroussel-capture2"
+            src="../../assets/owod2.png"
+          />
+          <img
+            (click)="closeCaroussel(2)"
+            class="caroussel-capture caroussel-capture2"
+            src="../../assets/owod3.png"
+          />
+          <img
+            (click)="closeCaroussel(2)"
+            class="caroussel-capture caroussel-capture2"
+            src="../../assets/owod4.png"
+          />
+          <img
+            (click)="closeCaroussel(2)"
+            class="caroussel-capture caroussel-capture2"
+            src="../../assets/owod5.png"
+          />
+        </div>
+        <div class="caroussel-arrows-container">
+          <div class="caroussel-circle-arrow">
+            <mat-icon class="caroussel-arrow" (click)="onCarousselArrowClick2('left')"
+              >chevron_left</mat-icon
+            >
+          </div>
+          <div class="caroussel-circle-arrow">
+            <mat-icon class="caroussel-arrow" (click)="onCarousselArrowClick2('right')"
+              >chevron_right</mat-icon
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -204,16 +306,37 @@
 
   <div class="contact-container">
     <h2 class="onglet">Contact</h2>
-    <div class="bulle">
-      <p>baudry.ddf&#64;gmail.com</p>
-    </div>
-    <div class="bulle">
-      <p>Profil LinkedIn</p>
-    </div>
-    <div class="bulle">
-      <p>Profil GitHub</p>
+    <p>
+      <strong>Vous avez un projet en tête ou une question ?</strong> <br />
+      N'hésitez pas à me contacter, je serai ravie d'échanger avec vous !
+    </p>
+    <p>
+      <strong>Vous êtes un recruteur ?</strong> <br />
+      Terminant actuellement mes projets freelance, <br />
+      je serai en recherche d'un poste à partir d'avril 2025.
+    </p>
+    <div class="bulle-wrapper">
+      <div class="bulle">
+        <img class="contact-img" src="../../assets/mail.png" />
+        <a>baudry.ddf&#64;gmail.com</a>
+      </div>
+      <div class="bulle">
+        <img class="contact-img" src="../../assets/linkedin.png" />
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/no%C3%A9mie-baudry-3308b621a/"
+          >Profil LinkedIn</a
+        >
+      </div>
+      <div class="bulle">
+        <img class="contact-img" src="../../assets/github.png" />
+        <a target="_blank" href="https://github.com/NoBdr07">Profil GitHub</a>
+      </div>
     </div>
   </div>
 
   <div class="ghost-container"></div>
+  <div class="footer">
+    <p>&copy; 2025 Noémie Baudry. Tous droits réservés.</p>
+  </div>
 </div>
