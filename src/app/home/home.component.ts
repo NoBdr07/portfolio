@@ -24,6 +24,12 @@ export class HomeComponent implements AfterViewInit {
       skills: ["Rigueur", "Leadership", "Dépassement de soi"]
     },
     {
+      date: '2017',
+      description: 'Stage en studio de jeux vidéos',
+      photo: '../../assets/brazil.svg.png',
+      skills: ["Travail collaboratif", "Code en C#", "Anglais"]
+    },
+    {
       date: '2018',
       description: "Diplôme d'ingénieur mathématiques informatique",
       photo: '../../assets/diplome.png',
@@ -36,13 +42,19 @@ export class HomeComponent implements AfterViewInit {
       skills: ["Direction d'équipes et de projets", "Capacité d'organisation", "Capacité d'adaptation"]
     },
     {
-      date: 'Avril 2024',
+      date: '2023',
+      description: "Mission au Liban au sein de l'ONU",
+      photo: '../../assets/un.svg.png',
+      skills: ["Mission internationale", "Haute responsabilité", "Travail sous pression"]
+    },
+    {
+      date: '04 / 2024',
       description: 'Reconversion expert en développement logiciel',
       photo: '../../assets/study.png',
       skills: ["Spécialisation Java et Angular", "Veille techonologique", "Architecture logiciel"]
     },
     {
-      date: 'Septembre 2024',
+      date: '10 / 2024',
       description: "Développement d'applications full stack",
       photo: '../../assets/computer.png',
       skills: ["Projets réels", "Déploiement et monitoring", "Analyse des besoins client"]

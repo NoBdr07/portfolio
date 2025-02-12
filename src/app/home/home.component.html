@@ -25,9 +25,8 @@
     <div class="timeline">
       <div class="event" *ngFor="let item of events">
         <div class="date">{{ item.date }}</div>
-        <img class="illustration" [src]="item.photo" />
-
         <div class="description">{{ item.description }}</div>
+        <img class="illustration" [src]="item.photo" />
         <div class="skill" *ngFor="let skill of item.skills">+ {{ skill }}</div>
       </div>
     </div>
@@ -47,106 +46,108 @@
 
   <div class="competences-container">
     <h2 class="onglet">Compétences</h2>
-    <div class="competences">
-      <h3>Expertise technique</h3>
-      <div class="competence">
-        <p>Java / Spring</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="80"></div>
+    <div class="competences-wrapper">
+      <div class="competences">
+        <h3>Expertise technique</h3>
+        <div class="competence">
+          <p>Java / Spring</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="80"></div>
+          </div>
+        </div>
+        <div class="competence">
+          <p>Typescript / Angular</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="90"></div>
+          </div>
+        </div>
+        <div class="competence">
+          <p>MySQL</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="70"></div>
+          </div>
+        </div>
+        <div class="competence">
+          <p>MongoDB</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="60"></div>
+          </div>
+        </div>
+        <div class="competence">
+          <p>Docker</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="50"></div>
+          </div>
+        </div>
+        <div class="competence">
+          <p>Déploiement (AWS, Heroku)</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="60"></div>
+          </div>
+        </div>
+        <div class="competence">
+          <p>CI/CD (GitHub Actions)</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="50"></div>
+          </div>
+        </div>
+        <div class="competence">
+          <p>Bonnes pratiques (Code propre, SOLID, approche TDD/BDD)</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="70"></div>
+          </div>
         </div>
       </div>
-      <div class="competence">
-        <p>Typescript / Angular</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="90"></div>
-        </div>
-      </div>
-      <div class="competence">
-        <p>MySQL</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="70"></div>
-        </div>
-      </div>
-      <div class="competence">
-        <p>MongoDB</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="60"></div>
-        </div>
-      </div>
-      <div class="competence">
-        <p>Docker</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="50"></div>
-        </div>
-      </div>
-      <div class="competence">
-        <p>Déploiement (AWS, Heroku)</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="60"></div>
-        </div>
-      </div>
-      <div class="competence">
-        <p>CI/CD (GitHub Actions)</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="50"></div>
-        </div>
-      </div>
-      <div class="competence">
-        <p>Bonnes pratiques (Code propre, SOLID, approche TDD/BDD)</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="70"></div>
-        </div>
-      </div>
-    </div>
 
-    <div class="competences">
-      <h3>Aptitudes professionnelles</h3>
-      <div class="competence">
-        <p>Capacité d'adaptation</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="100"></div>
+      <div class="competences">
+        <h3>Aptitudes professionnelles</h3>
+        <div class="competence">
+          <p>Capacité d'adaptation</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="100"></div>
+          </div>
         </div>
-      </div>
-      <div class="competence">
-        <p>Leadership</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="100"></div>
+        <div class="competence">
+          <p>Leadership</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="100"></div>
+          </div>
         </div>
-      </div>
-      <div class="competence">
-        <p>Collaboration et communication</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="100"></div>
+        <div class="competence">
+          <p>Collaboration et communication</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="100"></div>
+          </div>
         </div>
-      </div>
-      <div class="competence">
-        <p>Méthodes Agile</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="60"></div>
+        <div class="competence">
+          <p>Méthodes Agile</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="60"></div>
+          </div>
         </div>
-      </div>
-      <div class="competence">
-        <p>Capacité d'analyse et de synthèse</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="90"></div>
+        <div class="competence">
+          <p>Capacité d'analyse et de synthèse</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="90"></div>
+          </div>
         </div>
-      </div>
-      <div class="competence">
-        <p>Organisation / gestion de projets</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="80"></div>
+        <div class="competence">
+          <p>Organisation / gestion de projets</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="80"></div>
+          </div>
         </div>
-      </div>
-      <div class="competence">
-        <p>Veille et curiosité technique</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="70"></div>
+        <div class="competence">
+          <p>Veille et curiosité technique</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="70"></div>
+          </div>
         </div>
-      </div>
-      <div class="competence">
-        <p>Résolution de problèmes</p>
-        <div class="jauge">
-          <div class="jauge-bar" data-skill-level="90"></div>
+        <div class="competence">
+          <p>Résolution de problèmes</p>
+          <div class="jauge">
+            <div class="jauge-bar" data-skill-level="90"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -156,7 +157,16 @@
     <div class="projets">
       <h2 class="onglet">Projets</h2>
       <div class="projet">
-        <h3>Randogs</h3>
+        <h3>
+          Randogs
+          <a
+            href="https://randogs-72fb7027accb.herokuapp.com/"
+            target="_blank"
+            class="visit"
+            >Visiter</a
+          >
+        </h3>
+
         <p>
           Cette application permet aux clients de réserver en ligne, payer leur
           réservation, offrir des bons cadeaux et consulter les informations sur
@@ -227,12 +237,16 @@
           </div>
           <div class="caroussel-arrows-container">
             <div class="caroussel-circle-arrow">
-              <mat-icon class="caroussel-arrow" (click)="onCarousselArrowClick1('left')"
+              <mat-icon
+                class="caroussel-arrow"
+                (click)="onCarousselArrowClick1('left')"
                 >chevron_left</mat-icon
               >
             </div>
             <div class="caroussel-circle-arrow">
-              <mat-icon class="caroussel-arrow" (click)="onCarousselArrowClick1('right')"
+              <mat-icon
+                class="caroussel-arrow"
+                (click)="onCarousselArrowClick1('right')"
                 >chevron_right</mat-icon
               >
             </div>
@@ -240,7 +254,13 @@
         </div>
       </div>
       <div class="projet">
-        <h3>Plateforme OWOD</h3>
+        <h3>
+          Plateforme OWOD
+          <a href="https://owod.aipda-design.org/" target="_blank" class="visit"
+            >Visiter</a
+          >
+        </h3>
+
         <p>
           Cette plateforme a été créée au profit de l'AIPDA (association pour la
           promotion du design en Afrique). Elle est constituée du base de
@@ -253,11 +273,31 @@
           du département tech de l'association.
         </p>
         <div class="captures captures2">
-          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod1.png" />
-          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod2.png" />
-          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod3.png" />
-          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod4.png" />
-          <img (click)="openCaroussel(2)" class="capture capture2" src="../../assets/owod5.png" />
+          <img
+            (click)="openCaroussel(2)"
+            class="capture capture2"
+            src="../../assets/owod1.png"
+          />
+          <img
+            (click)="openCaroussel(2)"
+            class="capture capture2"
+            src="../../assets/owod2.png"
+          />
+          <img
+            (click)="openCaroussel(2)"
+            class="capture capture2"
+            src="../../assets/owod3.png"
+          />
+          <img
+            (click)="openCaroussel(2)"
+            class="capture capture2"
+            src="../../assets/owod4.png"
+          />
+          <img
+            (click)="openCaroussel(2)"
+            class="capture capture2"
+            src="../../assets/owod5.png"
+          />
         </div>
       </div>
       <div *ngIf="openCaroussel2" class="caroussel-container">
@@ -290,18 +330,28 @@
         </div>
         <div class="caroussel-arrows-container">
           <div class="caroussel-circle-arrow">
-            <mat-icon class="caroussel-arrow" (click)="onCarousselArrowClick2('left')"
+            <mat-icon
+              class="caroussel-arrow"
+              (click)="onCarousselArrowClick2('left')"
               >chevron_left</mat-icon
             >
           </div>
           <div class="caroussel-circle-arrow">
-            <mat-icon class="caroussel-arrow" (click)="onCarousselArrowClick2('right')"
+            <mat-icon
+              class="caroussel-arrow"
+              (click)="onCarousselArrowClick2('right')"
               >chevron_right</mat-icon
             >
           </div>
         </div>
       </div>
     </div>
+    <p class="projets-texte">
+      Ces deux projets sont les plus complets que j'ai mené. <br />De l'analyse
+      des besoins client jusqu'au déploiement et au monitoring. <br />Vous
+      trouverez sur mon repository GitHub tout mes autres projets dont le code
+      est accessible (application de blogging, application microservices...).
+    </p>
   </div>
 
   <div class="contact-container">
@@ -318,7 +368,7 @@
     <div class="bulle-wrapper">
       <div class="bulle">
         <img class="contact-img" src="../../assets/mail.png" />
-        <a>baudry.ddf&#64;gmail.com</a>
+        <a class="mail">baudry.ddf&#64;gmail.com</a>
       </div>
       <div class="bulle">
         <img class="contact-img" src="../../assets/linkedin.png" />

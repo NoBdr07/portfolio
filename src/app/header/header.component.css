@@ -19,3 +19,14 @@ img {
   font-size: 2vw;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .portfolio {
+    font-size: 2rem;
+  }
+
+  .header-container {
+    width: 87%;
+    position: relative;
+  }
+}
