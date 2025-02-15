@@ -29,4 +29,8 @@ img {
     width: 87%;
     position: relative;
   }
+
+  img {
+    height: 40px;
+  }
 }
