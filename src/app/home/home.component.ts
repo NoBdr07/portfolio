@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -15,49 +15,65 @@ export class HomeComponent implements AfterViewInit {
       date: '2013',
       description: 'Prépa scientifique (maths Sup, maths Spé)',
       photo: '../../assets/maths.png',
-      skills: ["Esprit scientifique", "Mathématiques", "Python"]
+      skills: ['Esprit scientifique', 'Mathématiques', 'Python'],
     },
     {
       date: '2015',
       description: 'École Spéciale Militaire de Saint-Cyr',
       photo: '../../assets/esm.png',
-      skills: ["Rigueur", "Leadership", "Dépassement de soi"]
+      skills: ['Rigueur', 'Leadership', 'Dépassement de soi'],
     },
     {
       date: '2017',
       description: 'Stage en studio de jeux vidéos',
       photo: '../../assets/brazil.svg.png',
-      skills: ["Travail collaboratif", "Code en C#", "Anglais"]
+      skills: ['Travail collaboratif', 'Code en C#', 'Anglais'],
     },
     {
       date: '2018',
       description: "Diplôme d'ingénieur mathématiques informatique",
       photo: '../../assets/diplome.png',
-      skills: ["Esprit d'analyse", "C#", "Unreal Engine"]
+      skills: ["Esprit d'analyse", 'C#', 'Unreal Engine'],
     },
     {
       date: '2019',
       description: "Officier dans l'armée de terre",
       photo: '../../assets/officer.png',
-      skills: ["Direction d'équipes et de projets", "Capacité d'organisation", "Capacité d'adaptation"]
+      skills: [
+        "Direction d'équipes et de projets",
+        "Capacité d'organisation",
+        "Capacité d'adaptation",
+      ],
     },
     {
       date: '2023',
       description: "Mission au Liban au sein de l'ONU",
       photo: '../../assets/un.svg.png',
-      skills: ["Mission internationale", "Haute responsabilité", "Travail sous pression"]
+      skills: [
+        'Mission internationale',
+        'Haute responsabilité',
+        'Travail sous pression',
+      ],
     },
     {
       date: '04 / 2024',
       description: 'Reconversion expert en développement logiciel',
       photo: '../../assets/study.png',
-      skills: ["Spécialisation Java et Angular", "Veille techonologique", "Architecture logiciel"]
+      skills: [
+        'Spécialisation Java et Angular',
+        'Veille techonologique',
+        'Architecture logiciel',
+      ],
     },
     {
       date: '10 / 2024',
       description: "Développement d'applications full stack",
       photo: '../../assets/computer.png',
-      skills: ["Projets réels", "Déploiement et monitoring", "Analyse des besoins client"]
+      skills: [
+        'Projets réels',
+        'Déploiement et monitoring',
+        'Analyse des besoins client',
+      ],
     },
   ];
 
@@ -72,23 +88,24 @@ export class HomeComponent implements AfterViewInit {
 
   onArrowClick(direction: string) {
     const section = this.el.nativeElement.querySelector('.timeline');
-  
-    if (direction === "left") {
+
+    if (direction === 'left') {
       section.scrollBy({
         left: -400, // Déplacement vers la gauche
-        behavior: 'smooth' // Animation fluide
+        behavior: 'smooth', // Animation fluide
       });
-    } else if (direction === "right") {
+    } else if (direction === 'right') {
       section.scrollBy({
         left: 400, // Déplacement vers la droite
-        behavior: 'smooth' // Animation fluide
+        behavior: 'smooth', // Animation fluide
       });
     }
   }
 
   ngAfterViewInit(): void {
-    const competences: NodeListOf<HTMLElement> = this.el.nativeElement.querySelectorAll('.jauge-bar');
-    
+    const competences: NodeListOf<HTMLElement> =
+      this.el.nativeElement.querySelectorAll('.jauge-bar');
+
     // IntersectionObserver configuration
     const observer = new IntersectionObserver(
       (entries) => {
@@ -113,13 +130,13 @@ export class HomeComponent implements AfterViewInit {
   }
 
   openCaroussel(carousselNumber: number) {
-    if(carousselNumber === 1) {
+    if (carousselNumber === 1) {
       this.openCaroussel1 = true;
       this.activeCarouselIndex1 = 0;
       setTimeout(() => {
         this.updateCarousel1();
       }, 0);
-    } 
+    }
     if (carousselNumber === 2) {
       this.openCaroussel2 = true;
       this.activeCarouselIndex2 = 0;
@@ -127,13 +144,13 @@ export class HomeComponent implements AfterViewInit {
         this.updateCarousel2();
       }, 0);
     }
-  }  
-  
+  }
+
   closeCaroussel(carousselNumber: number) {
-    if(carousselNumber === 1) {
+    if (carousselNumber === 1) {
       this.openCaroussel1 = false;
       this.activeCarouselIndex1 = 0;
-    } 
+    }
     if (carousselNumber === 2) {
       this.openCaroussel2 = false;
       this.activeCarouselIndex2 = 0;
@@ -142,13 +159,18 @@ export class HomeComponent implements AfterViewInit {
 
   onCarousselArrowClick1(direction: string): void {
     const container = this.el.nativeElement.querySelector('.caroussel1');
-    if (!container) { return; }
-    const images: NodeListOf<HTMLElement> = container.querySelectorAll('.caroussel-capture1');
+    if (!container) {
+      return;
+    }
+    const images: NodeListOf<HTMLElement> = container.querySelectorAll(
+      '.caroussel-capture1'
+    );
     const count = images.length;
     if (direction === 'right') {
       this.activeCarouselIndex1 = (this.activeCarouselIndex1 + 1) % count;
     } else if (direction === 'left') {
-      this.activeCarouselIndex1 = (this.activeCarouselIndex1 - 1 + count) % count;
+      this.activeCarouselIndex1 =
+        (this.activeCarouselIndex1 - 1 + count) % count;
     }
     this.updateCarousel1();
   }
@@ -156,8 +178,12 @@ export class HomeComponent implements AfterViewInit {
   // Met à jour les classes CSS des images du carrousel 1 en fonction de l'index actif
   updateCarousel1(): void {
     const container = this.el.nativeElement.querySelector('.caroussel1');
-    if (!container) { return; }
-    const images: NodeListOf<HTMLElement> = container.querySelectorAll('.caroussel-capture1');
+    if (!container) {
+      return;
+    }
+    const images: NodeListOf<HTMLElement> = container.querySelectorAll(
+      '.caroussel-capture1'
+    );
     const count = images.length;
     const activeIndex = this.activeCarouselIndex1;
     // Pour un carrousel circulaire, on calcule l'image de gauche et de droite
@@ -179,13 +205,18 @@ export class HomeComponent implements AfterViewInit {
 
   onCarousselArrowClick2(direction: string): void {
     const container = this.el.nativeElement.querySelector('.caroussel2');
-    if (!container) { return; }
-    const images: NodeListOf<HTMLElement> = container.querySelectorAll('.caroussel-capture2');
+    if (!container) {
+      return;
+    }
+    const images: NodeListOf<HTMLElement> = container.querySelectorAll(
+      '.caroussel-capture2'
+    );
     const count = images.length;
     if (direction === 'right') {
       this.activeCarouselIndex2 = (this.activeCarouselIndex2 + 1) % count;
     } else if (direction === 'left') {
-      this.activeCarouselIndex2 = (this.activeCarouselIndex2 - 1 + count) % count;
+      this.activeCarouselIndex2 =
+        (this.activeCarouselIndex2 - 1 + count) % count;
     }
     this.updateCarousel2();
   }
@@ -193,8 +224,12 @@ export class HomeComponent implements AfterViewInit {
   // Met à jour les classes CSS des images du carrousel 1 en fonction de l'index actif
   updateCarousel2(): void {
     const container = this.el.nativeElement.querySelector('.caroussel2');
-    if (!container) { return; }
-    const images: NodeListOf<HTMLElement> = container.querySelectorAll('.caroussel-capture2');
+    if (!container) {
+      return;
+    }
+    const images: NodeListOf<HTMLElement> = container.querySelectorAll(
+      '.caroussel-capture2'
+    );
     const count = images.length;
     const activeIndex = this.activeCarouselIndex2;
     // Pour un carrousel circulaire, on calcule l'image de gauche et de droite
@@ -213,5 +248,4 @@ export class HomeComponent implements AfterViewInit {
       }
     });
   }
-
 }

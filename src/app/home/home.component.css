@@ -723,6 +723,11 @@ h1 {
     line-height: 100px;
   }
 
+  .titles-container h2 {
+    -webkit-animation: none;
+    animation: none ;
+  }
+
   .title h2 {
     font-size: 1rem;
     text-align: center;
@@ -752,13 +757,39 @@ h1 {
     border-radius: 0 10px 0 0;
   }
 
-  /* CURSUS */
+  /* CONTAINERS */
   .cursus-container {
     padding: 20px;
     height: auto;
     position: static;
     margin: 20px 0;
   }
+
+  .competences-container {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    position: static;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .projets-container {
+    padding: 20px;
+    height: auto;
+    position: static;
+    margin-top: 100px;
+  }
+
+  .contact-container {
+    padding: 20px;
+    height: auto;
+    position: static;
+    margin-top: 100px;
+  }
+
+  /* CURSUS */
+  
   .timeline {
     overflow-x: scroll;
     flex-wrap: nowrap;
@@ -798,15 +829,7 @@ h1 {
   }
 
   /* COMPÉTENCES */
-  .competences-container {
-    flex-direction: column;
-    padding: 20px;
-    height: auto;
-    position: static;
-    align-items: center;
-    margin-top: 100px;
-  }
-
+  
   .competences-container h2 {
     left: -88px !important;
   }
@@ -830,13 +853,7 @@ h1 {
   }
 
   /* PROJETS */
-  .projets-container {
-    padding: 20px;
-    height: auto;
-    position: static;
-    margin-top: 100px;
-  }
-
+  
   .projets-container h2 {
     min-width: auto;
     top: 34px;
@@ -856,18 +873,19 @@ h1 {
   .capture {
     height: 150px;
   }
+  .caroussel-capture {
+    height: 46vw;
+  }
   .projets-texte {
     font-size: 1.2rem;
   }
 
-  /* CONTACT */
-  .contact-container {
-    padding: 20px;
-    height: auto;
-    position: static;
-    margin-top: 100px;
+  .hidden {
+    top: 40%;
   }
 
+  /* CONTACT */
+  
   .contact-container h2 {
     width: fit-content;
     margin-bottom: -50px;
