@@ -1,12 +1,12 @@
 {
   "name": "portfolio",
   "version": "0.0.0",
-  "homepage": "https://github.com/NoBdr07/portfolio",
+  "homepage": "https://nobdr07.github.io/portfolio",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "predeploy": "npm run build",
+    "predeploy": "ng build --base-href=/portfolio/",
     "deploy": "gh-pages -d dist/portfolio",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
