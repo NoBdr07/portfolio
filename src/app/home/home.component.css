@@ -126,6 +126,46 @@ h1 {
   top: 0.5vw;
 }
 
+.intro-icon {
+  float: left;
+  margin-right: 20px;
+}
+
+.intro-paragraphe {
+  opacity: 0;
+}
+
+.anime {
+  opacity: 1;
+  -webkit-animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 .titles-container h2 {
   font-weight: bolder;
@@ -206,23 +246,40 @@ h1 {
   margin: 0 50px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  min-width: 300px;
+  position: sticky;
+}
+
+.event:nth-child(1) {
+  left: 0px;
+}
+
+.event:nth-child(2) {
+  left: 20px;
+}
+
+.event:nth-child(3) {
+  left: 40px;
+}
+
+.event:nth-child(4) {
+  left: 60px;
+}
+
+.event:nth-child(5) {
+  left: 80px;
+}
+
+.event:nth-child(6) {
+  left: 100px;
 }
 
 .event .date {
-  position: relative;
-  rotate: -90deg;
-  left: -200px;
-  color: var(--dark-color) !important;
-  z-index: 1000;
+  color: var(--primary-color) !important;
   font-size: 3rem;
-  top: 114px;
-  width: 300px;
-  text-align: end;
 }
 
 .event .description {
-  margin-top: -60px;
   font-size: 1.2rem;
   color: var(--primary-color);
   font-weight: bold;
@@ -689,6 +746,26 @@ h1 {
     top: -20px;
   }
 
+  .illus {
+    height: 100vw;
+  }
+
+  .titles {
+    gap: 0;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -11vw;
+    right: 64vw;
+  }
+
+  .illus-wrapper {
+    left: 67vw;
+  }
+
   .illus-wrapper::after {
     display: none;
   }
@@ -702,22 +779,6 @@ h1 {
     left: 0;
   }
 
-  .titles {
-    gap: 0;
-  }
-
-  .title {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: -65px;
-    top: -30px;
-  }
-
-  .illus {
-    height: 200px;
-  }
-
   .titles-container h1 {
     font-size: 5rem;
     line-height: 100px;
@@ -725,7 +786,7 @@ h1 {
 
   .titles-container h2 {
     -webkit-animation: none;
-    animation: none ;
+    animation: none;
   }
 
   .title h2 {
@@ -738,7 +799,7 @@ h1 {
   }
 
   .intro {
-    margin: 0 20px 100px 20px;
+    margin: 300px 20px 100px 20px;
     font-size: 1rem;
     line-height: 2;
     text-align: center;
@@ -789,7 +850,7 @@ h1 {
   }
 
   /* CURSUS */
-  
+
   .timeline {
     overflow-x: scroll;
     flex-wrap: nowrap;
@@ -797,22 +858,57 @@ h1 {
   }
   .event {
     margin: 25px;
-    height: 350px;
-    width: 200px;
+    height: 400px;
+    min-width: 200px;
   }
 
-  .description, .skill {
+  .event * {
+    max-width: 100%; /* Limite la largeur des enfants */
+  }
+
+  .event:nth-child(1) {
+    left: 0px;
+  }
+
+  .event:nth-child(2) {
+    left: 10px;
+  }
+
+  .event:nth-child(3) {
+    left: 20px;
+  }
+
+  .event:nth-child(4) {
+    left: 30px;
+  }
+
+  .event:nth-child(5) {
+    left: 40px;
+  }
+
+  .event:nth-child(6) {
+    left: 50px;
+  }
+
+  .event:nth-child(7) {
+    left: 60px;
+  }
+
+  .event:nth-child(8) {
+    left: 70px;
+  }
+
+  .event:nth-child(9) {
+    left: 80px;
+  }
+
+  .description,
+  .skill {
     font-size: 1rem !important;
   }
 
   .event .date {
-    position: relative;
-    transform: none;
     font-size: 2rem;
-    text-align: center;
-    margin-bottom: 10px;
-    left: -140px;
-    top: 25px;
   }
 
   .arrow-container {
@@ -829,7 +925,7 @@ h1 {
   }
 
   /* COMPÉTENCES */
-  
+
   .competences-container h2 {
     left: -31% !important;
   }
@@ -853,7 +949,7 @@ h1 {
   }
 
   /* PROJETS */
-  
+
   .projets-container h2 {
     min-width: auto;
     top: 34px;
@@ -885,7 +981,7 @@ h1 {
   }
 
   /* CONTACT */
-  
+
   .contact-container h2 {
     width: fit-content;
     margin-bottom: -50px;

@@ -106,8 +106,8 @@ export class HomeComponent implements AfterViewInit {
     const competences: NodeListOf<HTMLElement> =
       this.el.nativeElement.querySelectorAll('.jauge-bar');
 
-    // IntersectionObserver configuration
-    const observer = new IntersectionObserver(
+    // Observer pour les jauges de compétences
+    const observerSkills = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
@@ -116,17 +116,41 @@ export class HomeComponent implements AfterViewInit {
             if (skillLevel) {
               setTimeout(() => {
                 target.style.width = `${skillLevel}%`;
-              }, index * 500); // Délais entre chaque compétence
+              }, index * 500);
             }
-            observer.unobserve(target); // Arrête d'observer après l'animation
+            observerSkills.unobserve(target);
           }
         });
       },
-      { threshold: 0.5 } // 50% visible pour déclencher l'animation
+      { threshold: 0.5 }
     );
 
     // Observe chaque jauge
-    competences.forEach((bar) => observer.observe(bar));
+    competences.forEach((bar) => observerSkills.observe(bar));
+
+    const introParagraphs: NodeListOf<HTMLElement> =
+    this.el.nativeElement.querySelectorAll('.intro-paragraphe');
+
+    // Observer pour les paragraphes de l'intro
+    const observerIntro = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            // Ajouter un délai progressif en fonction de l'index
+            setTimeout(() => {
+              target.classList.add('anime'); // Ajoute la classe pour l'animation
+            }, index * 2000); // délai entre chaque paragraphe
+            observerIntro.unobserve(target);
+          }
+        });
+      },
+      { threshold: 0.4 } 
+    );
+
+  // Observe chaque paragraphe de l'intro
+  introParagraphs.forEach((p) => observerIntro.observe(p));
+
   }
 
   openCaroussel(carousselNumber: number) {
