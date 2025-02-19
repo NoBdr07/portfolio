@@ -121,7 +121,7 @@ h1 {
   font-size: 2vw;
   text-align: start;
   font-weight: bolder;
-  line-height: 150px;
+  line-height: 50px;
   margin: 300px 100px;
   top: 0.5vw;
 }
@@ -752,7 +752,7 @@ h1 {
     padding: 10px 20px;
     font-size: 1.5rem;
     height: 30px;
-    left: -120px !important;
+    left: -39% !important;
     border-left: none;
     border-radius: 0 10px 0 0;
   }
@@ -831,7 +831,7 @@ h1 {
   /* COMPÉTENCES */
   
   .competences-container h2 {
-    left: -88px !important;
+    left: -31% !important;
   }
 
   .competences-wrapper {
