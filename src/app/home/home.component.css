@@ -743,7 +743,7 @@ h1 {
     font-size: 4rem;
     line-height: 100px;
     position: relative;
-    top: -20px;
+    top: 100px;
   }
 
   .illus {
@@ -799,10 +799,16 @@ h1 {
   }
 
   .intro {
-    margin: 300px 20px 100px 20px;
+    margin: -28px 0 0 0;
     font-size: 1rem;
     line-height: 2;
     text-align: center;
+    color: var(--primary-color);
+    background-color: var(--dark-color);
+    padding-top: 100px;
+    padding-bottom: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .onglet {
