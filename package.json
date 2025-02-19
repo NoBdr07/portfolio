@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "predeploy": "ng build --base-href=/portfolio/ && copy .nojekyll dist/portfolio\\browser\\",
+    "predeploy": "ng build --base-href=/portfolio/ && copy \".nojekyll\" \"dist/portfolio/browser/\"",
     "deploy": "gh-pages -d dist/portfolio/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
