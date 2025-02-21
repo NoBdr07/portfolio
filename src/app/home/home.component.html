@@ -11,10 +11,22 @@
       </div>
     </div>
     <div class="intro">
-      <p class="intro-paragraphe"> 🎖️  J’ai mené des équipes, planifié des missions, pris des décisions.</p>
-      <p class="intro-paragraphe">💻  Aujourd’hui, je reviens au code.</p>
-      <p class="intro-paragraphe">🎮  Même logique, même rigueur, nouveau terrain de jeu.</p>
-      <p class="intro-paragraphe">🧩  De l’armée au développement, l’adaptation reste ma spécialité.</p>
+      <div class="intro-texte">
+        <p class="intro-paragraphe">
+          🎖️ J’ai mené des équipes, planifié des missions, pris des décisions.
+        </p>
+        <p class="intro-paragraphe">💻 Aujourd’hui, je reviens au code.</p>
+        <p class="intro-paragraphe">
+          🎮 Même logique, même rigueur, nouveau terrain de jeu.
+        </p>
+        <p class="intro-paragraphe">
+          🧩 De l’armée au développement, l’adaptation reste ma spécialité.
+        </p>
+      </div>
+
+      <div class="intro-image">
+        <img class="illus-intro" src="assets/illus-intro.png" />
+      </div>
     </div>
   </div>
 
@@ -24,8 +36,11 @@
       <div class="event" *ngFor="let item of events">
         <div class="date">{{ item.date }}</div>
         <div class="description">{{ item.description }}</div>
+        <div class="skill-container" *ngFor="let skill of item.skills">
+          <img src="assets/plus.png" class="skill-icon" />
+          <p class="skill">{{ skill }}</p>
+        </div>
         <img class="illustration" [src]="item.photo" />
-        <div class="skill" *ngFor="let skill of item.skills">+ {{ skill }}</div>
       </div>
     </div>
     <div class="arrow-container">
@@ -163,17 +178,17 @@
         </h3>
 
         <p>
-          Cette application permet aux clients de réserver en ligne, payer leur
-          réservation, offrir des bons cadeaux et consulter les informations sur
-          les différentes activités proposées par l'entreprise. Elle comporte
-          aussi une interface administrateur complète qui permet la gestion du
-          planning, des créneaux disponibles, des bons cadeaux, des activités et
-          de la FAQ par les gérants de l'entreprise. <br />
+          Cette application permet aux clients de
+          <strong>réserver en ligne</strong>, payer leur réservation, offrir des
+          bons cadeaux et consulter les informations sur les différentes
+          activités proposées. <br /><br />
+          Elle comporte aussi<strong>
+            une interface administrateur complète </strong
+          >qui permet la gestion du planning, des créneaux disponibles, des bons
+          cadeaux, des activités et de la FAQ par les gérants de l'entreprise.
+          <br /><br />
           Elle est composée d'un front Angular, une API Java Spring, une base de
-          données MySQL. Elle est déployée sur Heroku et permet l'analyse de
-          l'activité du site avec Google Analytics. La sécurité, le SEO et
-          l'experience utilisateur ont été des points d'attention particuliers
-          dans la réalisation de ce projet.
+          données MySQL et est deployée sur Heroku.
         </p>
         <div class="captures captures1">
           <img
@@ -203,6 +218,9 @@
           />
         </div>
         <div *ngIf="openCaroussel1" class="caroussel-container">
+          <mat-icon class="caroussel-cross" (click)="closeCaroussel(1)"
+            >clear</mat-icon
+          >
           <div class="caroussel-capture-container caroussel1">
             <img
               (click)="closeCaroussel(1)"
@@ -259,10 +277,11 @@
         <p>
           Cette plateforme a été créée au profit de l'AIPDA (association pour la
           promotion du design en Afrique). Elle est constituée du base de
-          données MongoDB qui répertorie les designers du monde entier
-          travaillant en lien avec l'art africain, et d'une application web
-          Spring/Angular qui permet aux designers de s'inscrire et de configurer
-          leur profil. <br />
+          données MongoDB qui
+          <strong>répertorie les designers du monde entier</strong> travaillant
+          en lien avec l'art africain, et d'une application web Spring/Angular
+          qui permet aux designers de<strong> s'inscrire et de configurer leur profil.</strong>
+          <br /><br />
           Cette plateforme a été déployée sur AWS (S3, Elastic Beanstalk,
           Amplify). Il s'agit d'un travail collaboratif avec plusieurs acteurs
           du département tech de l'association.
@@ -296,6 +315,8 @@
         </div>
       </div>
       <div *ngIf="openCaroussel2" class="caroussel-container">
+        <mat-icon class="caroussel-cross" (click)="closeCaroussel(2)"
+            >clear</mat-icon>
         <div class="caroussel-capture-container caroussel2">
           <img
             (click)="closeCaroussel(2)"
@@ -378,6 +399,10 @@
         <a target="_blank" href="https://github.com/NoBdr07">Profil GitHub</a>
       </div>
     </div>
+  </div>
+
+  <div class="rappel-perso">
+    <img src="assets/illusperso2.webp" />
   </div>
 
   <div class="ghost-container"></div>

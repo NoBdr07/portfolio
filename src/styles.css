@@ -7,9 +7,9 @@ body {
 :root {
     --primary-color:  white;
     --dark-color: #8c0000;
-    --accent-color: #8c0000;
-    --warn-color: #E13D3D;
-    --background-color: #8c0000;
+    --accent-color: #3b6b6b;
+    --warn-color: #8c2e00 ;
+    --background-color: #4c0000 ;
     --text-color: #white;
   
     --mat-primary-color: var(--background-color);

@@ -14,31 +14,31 @@ export class HomeComponent implements AfterViewInit {
     {
       date: '2013',
       description: 'Prépa scientifique (maths Sup, maths Spé)',
-      photo: 'assets/maths.png',
+      photo: 'assets/formula.png',
       skills: ['Esprit scientifique', 'Mathématiques', 'Python'],
     },
     {
       date: '2015',
       description: 'École Spéciale Militaire de Saint-Cyr',
-      photo: 'assets/esm.png',
+      photo: 'assets/target.png',
       skills: ['Rigueur', 'Leadership', 'Dépassement de soi'],
     },
     {
       date: '2017',
-      description: 'Stage en studio de jeux vidéos',
-      photo: 'assets/brazil.svg.png',
+      description: 'Stage en studio de jeux vidéos au Brésil',
+      photo: 'assets/brasil.png',
       skills: ['Travail collaboratif', 'Code en C#', 'Anglais'],
     },
     {
       date: '2018',
       description: "Diplôme d'ingénieur mathématiques informatique",
-      photo: 'assets/diplome.png',
+      photo: 'assets/graduate.png',
       skills: ["Esprit d'analyse", 'C#', 'Unreal Engine'],
     },
     {
       date: '2019',
       description: "Officier dans l'armée de terre",
-      photo: 'assets/officer.png',
+      photo: 'assets/soldier.png',
       skills: [
         "Direction d'équipes et de projets",
         "Capacité d'organisation",
@@ -48,7 +48,7 @@ export class HomeComponent implements AfterViewInit {
     {
       date: '2023',
       description: "Mission au Liban au sein de l'ONU",
-      photo: 'assets/un.svg.png',
+      photo: 'assets/nations.png',
       skills: [
         'Mission internationale',
         'Haute responsabilité',
@@ -58,7 +58,7 @@ export class HomeComponent implements AfterViewInit {
     {
       date: '04 / 2024',
       description: 'Reconversion expert en développement logiciel',
-      photo: 'assets/study.png',
+      photo: 'assets/reconv.png',
       skills: [
         'Spécialisation Java et Angular',
         'Veille techonologique',
@@ -68,7 +68,7 @@ export class HomeComponent implements AfterViewInit {
     {
       date: '10 / 2024',
       description: "Développement d'applications full stack",
-      photo: 'assets/computer.png',
+      photo: 'assets/app.png',
       skills: [
         'Projets réels',
         'Déploiement et monitoring',
