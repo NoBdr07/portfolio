@@ -84,6 +84,8 @@ export class HomeComponent implements AfterViewInit {
   activeCarouselIndex1: number = 0;
   activeCarouselIndex2: number = 0;
 
+  showScrollButton = false;
+
   constructor(private el: ElementRef) {}
 
   onArrowClick(direction: string) {
@@ -103,6 +105,13 @@ export class HomeComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+
+    // pour l'afficher de la flèche de montée
+    window.addEventListener('scroll', () => {
+      this.showScrollButton = window.scrollY > 1000;
+    });
+
+    // affichage dynamique des jauges
     const competences: NodeListOf<HTMLElement> =
       this.el.nativeElement.querySelectorAll('.jauge-bar');
 
@@ -151,6 +160,8 @@ export class HomeComponent implements AfterViewInit {
   // Observe chaque paragraphe de l'intro
   introParagraphs.forEach((p) => observerIntro.observe(p));
 
+
+  
   }
 
   openCaroussel(carousselNumber: number) {
@@ -270,6 +281,13 @@ export class HomeComponent implements AfterViewInit {
       } else {
         img.classList.add('hidden');
       }
+    });
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth' 
     });
   }
 }

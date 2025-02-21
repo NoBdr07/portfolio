@@ -1,3 +1,7 @@
+<div class="fleche-remonter-container" *ngIf="showScrollButton">
+  <mat-icon class="fleche-remonter" (click)="scrollToTop()">arrow_upward</mat-icon>
+</div>
+
 <div class="global-container">
   <div class="titles-container">
     <div class="titles">
@@ -276,7 +280,7 @@
 
         <p>
           Cette plateforme a été créée au profit de l'AIPDA (association pour la
-          promotion du design en Afrique). Elle est constituée du base de
+          promotion du design en Afrique). Elle est constituée d'une base de
           données MongoDB qui
           <strong>répertorie les designers du monde entier</strong> travaillant
           en lien avec l'art africain, et d'une application web Spring/Angular
@@ -365,7 +369,7 @@
     <p class="projets-texte">
       Ces deux projets sont les plus complets que j'ai mené. <br />De l'analyse
       des besoins client jusqu'au déploiement et au monitoring. <br />Vous
-      trouverez sur mon repository GitHub tout mes autres projets dont le code
+      trouverez sur mon repository GitHub mes autres projets dont le code
       est accessible (application de blogging, application microservices...).
     </p>
   </div>

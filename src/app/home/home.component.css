@@ -11,6 +11,22 @@ h3 {
   box-sizing: border-box;
 }
 
+.fleche-remonter-container {
+  position: fixed;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.fleche-remonter {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 1000;
+  background-color: #5151518a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 /* LES H2 POUR EFFET ONGLET */
 
 .onglet {
