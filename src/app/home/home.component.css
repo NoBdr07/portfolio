@@ -1142,8 +1142,6 @@ h1 {
   .footer p {
     font-size: 1rem;
     color: var(--dark-color);
-    font-weight: bold;
-    text-shadow: 0 0 5px #fff;
   }
 
   .caroussel-arrows-container {
