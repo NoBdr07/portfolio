@@ -197,10 +197,6 @@ h1 {
   position: relative;
   left: -9rem;
   font-size: 3rem;
-  animation-delay: 5s;
-  -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    2s both;
-  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
 }
 
 @-webkit-keyframes slide-in-bottom {
@@ -876,8 +872,8 @@ h1 {
     font-size: 1rem;
     text-align: center;
     top: -15px;
-    left: 16px;
-    width: 175px;
+    left: -13px;
+    width: 188px;
     line-height: 21px;
   }
 

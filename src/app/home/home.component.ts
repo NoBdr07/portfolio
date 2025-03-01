@@ -158,10 +158,32 @@ export class HomeComponent implements AfterViewInit {
     );
 
   // Observe chaque paragraphe de l'intro
-  introParagraphs.forEach((p) => observerIntro.observe(p));
+  introParagraphs.forEach((p) => observerIntro.observe(p)); 
 
+  setTimeout(() => {
+    this.animateJobTitle();
+  }, 1500);
+  }
 
-  
+  animateJobTitle(): void {
+    const jobTitle = this.el.nativeElement.querySelector('#job-title');
+    if (!jobTitle) return;
+    
+    const text = "Développeuse full stack";
+    let index = 0;
+    
+    // Vider le contenu initial
+    jobTitle.textContent = '';
+    
+    // Animation typewriter
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        jobTitle.textContent += text.charAt(index);
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100); // Vitesse de l'animation: 100ms par caractère
   }
 
   openCaroussel(carousselNumber: number) {
