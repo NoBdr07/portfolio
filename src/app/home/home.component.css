@@ -885,7 +885,7 @@ h1 {
     color: var(--primary-color);
     background-color: var(--background-color);
     padding-top: 100px;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     padding-left: 20px;
     padding-right: 20px;
     flex-direction: column;

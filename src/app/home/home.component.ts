@@ -25,7 +25,7 @@ export class HomeComponent implements AfterViewInit {
     },
     {
       date: '2017',
-      description: 'Stage en studio de jeux vidéos au Brésil',
+      description: 'Stage en studio de jeux vidéo au Brésil',
       photo: 'assets/brasil.png',
       skills: ['Travail collaboratif', 'Code en C#', 'Anglais'],
     },
